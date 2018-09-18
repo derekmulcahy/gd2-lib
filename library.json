@@ -1,0 +1,22 @@
+{
+    "name": "Gameduino2",
+    "keywords": "gameduino, display, arduino",
+    "description": "Gameduino 2 and 3 driver for the popular Gameduino series of graphics, audio video shields.",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/derekmulcahy/gd2-lib"
+    },
+    "authors":
+    [
+      {
+        "name": "James Bowman",
+        "email": "jamesb@excamera.com",
+        "url": "http://gameduino.com",
+        "maintainer": true
+      }
+    ],
+    "version": "1.0.3",
+    "frameworks": "arduino",
+    "platforms": "atmelavr, espressif2866, espressif32, ststm32"
+  }
