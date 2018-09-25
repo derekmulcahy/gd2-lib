@@ -42,11 +42,11 @@ public:
     SPI.begin();
 #if defined(TEENSYDUINO) || defined(ARDUINO_ARCH_STM32L4) || defined(ARDUINO_ARCH_STM32)
     SPI.beginTransaction(SPISettings(3000000, MSBFIRST, SPI_MODE0));
-#else
-#if !defined(__DUE__) && !defined(ESP8266) && !defined(ESP32) && !defined(ARDUINO_ARCH_STM32)
+#elif defined(ESP32)
+    SPI.setFrequency(20000000L);
+#elif !defined(__DUE__) && !defined(ESP8266)
     SPI.setClockDivider(SPI_CLOCK_DIV2);
     SPSR = (1 << SPI2X);
-#endif
 #endif
 
     hostcmd(0x42);    // SLEEP
