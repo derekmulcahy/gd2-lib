@@ -731,8 +731,7 @@ public:
 #if defined(__DUE__) || defined(TEENSYDUINO) || defined(ESP8266) || defined(ESP32) || 1
 
 #if defined(ARDUINO_ARCH_STM32)
-    //SPI.read(dst, 512);
-    SPI.transfer((void *)NULL, dst, 512);
+    SPI.read(dst, 512);
 #elif defined(ESP8266) || defined(ESP32)
     SPI.transferBytes(NULL, dst, 512);
 #else
